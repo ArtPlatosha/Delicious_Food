@@ -41,6 +41,10 @@ body {
 		margin-right: 5px;
 		margin-top: -1px;
 		opacity: 0.7;
+
+		@media (max-width: 365px) {
+			display: none;
+		}
 	}
 }
 
@@ -52,6 +56,10 @@ body {
 	left: 0;
 	z-index: 50;
 	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.014);
+
+	@media (max-width: 850px) {
+		padding: 10px 0;
+	}
 
 	&::before {
 		content: '';
@@ -74,6 +82,10 @@ body {
 	&__body {
 		display: flex;
 		align-items: center;
+
+		@media (max-width: 850px) {
+			margin-left: auto;
+		}
 	}
 
 	&__search,
@@ -92,16 +104,81 @@ body {
 				transform: scale(1.1);
 			}
 		}
+
+		@media (max-width: 950px) {
+			display: none;
+		}
+	}
+
+	&__basket {
+		@media (max-width: 1050px) {
+			margin-right: 0;
+		}
+
+		@media (max-width: 850px) {
+			display: block;
+		}
 	}
 	
 	&__burger {
 		display: none;
-	}	
+
+		@media (max-width: 850px) {
+			display: block;
+			position: relative;
+			width: 30px;
+			height: 25px;
+			margin-left: 5px;
+			position: relative;
+			z-index: 5;
+
+			&::after,
+			&::before,
+			& span {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				background-color: #616060;
+				transition: all 0.3s ease-in-out;
+			}
+
+			&::before {
+				top: 0;
+				left: 0;
+			}
+
+			& span {
+				top: 11px;
+			}
+
+			&::after {
+				bottom: 0;
+			}
+
+			&.active::before {
+				transform: rotate(45deg);
+				top: 11px;
+			}
+
+			&.active::after {
+				transform: rotate(-45deg);
+				bottom: 11px;
+			}
+
+			&.active span {
+				transform: scale(0);
+			}
+		}
+	}
+
 }
 
 .menu {
 	position: relative;
 	z-index: 5;
+
+	
 
 	&__list {
 		display: flex;
@@ -110,6 +187,12 @@ body {
 
 	&__item {
 		margin-right: 30px;
+
+		@media (max-width: 950px) {
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 
 	&__link {
@@ -141,6 +224,37 @@ body {
 			color: #292929;
 		}
 	}
+
+	@media (max-width: 850px) {
+		position: fixed;
+		top: 0;
+		right: 100%;
+		width: 100%;
+		height: 100%;
+		background-color: #f8f7f2;
+		padding: 120px 15px 0 0;
+		overflow: auto;
+		transition: all .3s ease-in-out;
+		z-index: 4;
+
+		&__list {
+			display: block;
+			text-align: right;
+		}
+
+		&__item {
+			margin-bottom: 40px;
+			margin-right: 0;
+		}
+
+		&__link {
+			font-size: 32px;
+		}
+
+		&.active {
+			right: 0;
+		}
+	}
 }
 
 .social__list {
@@ -166,5 +280,9 @@ body {
 		&:hover {
 			transform: scale(1.1);
 		}
+	}
+
+	@media (max-width: 1050px) {
+		display: none;
 	}
 }

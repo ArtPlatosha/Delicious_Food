@@ -255,4 +255,19 @@ body {
   .social__list {
     display: none;
   }
+}
+
+.home {
+  background-color: #222222;
+  color: #fff;
+  padding: 100px 0;
+}
+.home__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home__items {
+  flex: 0 0 50%;
+  margin-right: 20px;
 }/*# sourceMappingURL=style.css.map */

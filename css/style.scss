@@ -286,3 +286,20 @@ body {
 		display: none;
 	}
 }
+
+.home {
+	background-color: #222222;
+	color: #fff;
+	padding: 100px 0;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__items {
+		flex: 0 0 50%;
+		margin-right: 20px;
+	}
+}

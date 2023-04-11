@@ -658,4 +658,22 @@ body {
 }
 .contact__btn {
   background: transparent;
+}
+
+.partners {
+  padding: 50px 0;
+}
+.partners__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(50px + 100 * (100vw - 320px) / 1140);
+  overflow: auto;
+}
+.partners__image {
+  opacity: 0.7;
+  flex: 0 0 auto;
+}
+.partners__image img {
+  max-width: 200px;
 }/*# sourceMappingURL=style.css.map */
